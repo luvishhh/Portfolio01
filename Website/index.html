@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button id="theme-toggle"><i class="fas fa-moon"></i></button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="intro">
+            <h1>I'M LAVISH KHARE</h1>
+            <p>
+                Your friendly neighborhood full-stack developer, UX architect, and JavaScript engineer. With a passion for both frontend and backend technologies, I bridge the gap between design and functionality, ensuring seamless user experiences and robust application performance.
+            </p>
+            <p>
+                 I find inspiration in the balance of light and shadow, much like the balance I seek in my code. I tread the path of minimalism, finding beauty in simplicity and order. When I'm not crafting beautiful web experiences, you can find me reading articles or swaying to the rhythm of pop music & jazz, losing myself in the captivating flow of melodies. Feel free to contact me to discuss potential collaborations or just to chat about the latest in tech!
+            </p>
+            <a href="about.html" class="more">See More About Me →</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/lavish-khare-204975213"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/luvishhh/Portfolio-Example.git"><i class="fab fa-github"></i></a>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <style>
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .intro {
+                text-align: center; /* Center text on smaller screens */
+            }
+            .social-icons {
+                display: flex;
+                justify-content: center; /* Center social icons */
+            }
+        }
+    </style>
+</body>
+</html>

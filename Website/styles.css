@@ -1,0 +1,136 @@
+:root {
+    --background-color: #0f2027;
+    --text-color: #fff;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: var(--background-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    --background-color: #f0f0f0;
+    --text-color: #000;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a, #theme-toggle {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.intro {
+    text-align: center;
+    margin: 5vh auto;
+    max-width: 80vw;
+    padding: 0 2vw;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+    animation: glitch 1s infinite;
+}
+
+.intro p {
+    font-size: 1em;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    max-width: 50ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.more {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid currentColor;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.more::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+}
+
+.more:hover::after {
+    transform: translateX(0);
+}
+
+.more:hover {
+    transform: scale(1.05);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: inherit;
+    font-size: 1.2em;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+    }
+    50% {
+        text-shadow: -2px -2px #ff00ff, 2px 2px #00ffff;
+    }
+    100% {
+        text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+    }
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+} 
